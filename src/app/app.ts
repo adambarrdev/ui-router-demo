@@ -12,8 +12,33 @@ namespace app {
 
         $stateProvider
             .state('home', {
-                url: '/',
+                abstract: true,
+                url: '',
                 template: '<home></home>'
+            })
+            .state('home.step1', {
+                url: '/',
+                views: {
+                    'content': {
+                        template: '<h1>Step 1</h1>'
+                    }
+                }
+            })
+            .state('home.step2', {
+                url: '/step2',
+                views: {
+                    'content': {
+                        template: '<h1>Step 2</h1>'
+                    }
+                }
+            })
+            .state('home.step3', {
+                url: '/step3',
+                views: {
+                    'content': {
+                        template: '<h1>Step 3</h1>'
+                    }
+                }
             })
             .state('about', {
                 url: '/about',
