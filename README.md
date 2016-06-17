@@ -1,4 +1,4 @@
-# vscode-starter
+# ui-router-demo
 
 ## Install ##
 
