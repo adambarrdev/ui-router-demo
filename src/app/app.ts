@@ -31,6 +31,10 @@ namespace app {
             .state('about', {
                 url: '/about',
                 template: '<about></about>'
+            })
+            .state('components', {
+                url: '/components',
+                template: '<components></components>'
             });
 
         $urlRouterProvider.otherwise('/');
@@ -45,7 +49,8 @@ namespace app {
     angular
         .module('app', [
             'ui.router',
-            'ui.bootstrap'
+            'ui.bootstrap',
+            'ngAnimate'
         ])
         .config(appConfig)
         .run(appRunner);
