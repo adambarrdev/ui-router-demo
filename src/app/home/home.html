@@ -1,0 +1,15 @@
+<div>
+    <h1>
+        <i class="{{vm.headerIcon}}"></i> {{vm.title}}
+    </h1>
+</div>
+
+<ul class="nav nav-pills">
+    <li ui-sref-active="active"><a ui-sref="home.step1">Step 1</a></li>
+    <li ui-sref-active="active"><a ui-sref="home.step2">Step 2</a></li>
+    <li ui-sref-active="active"><a ui-sref="home.step3">Step 3</a></li>
+</ul>
+
+<div class="view-animate-container">
+    <div ui-view class="view-animate-slide"></div>
+</div>
