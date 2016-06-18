@@ -5,8 +5,18 @@ namespace app {
     export interface INavController { }
     export class NavController implements INavController {
 
-        static $inject: Array<string> = ['$state'];
-        constructor(public $state: angular.ui.IStateService) { }
+        public isCollapsed: boolean = true;
+
+        static $inject: Array<string> = ['$rootScope', '$state'];
+        constructor(private $rootScope: angular.IRootScopeService,
+            public $state: angular.ui.IStateService) {
+
+            let self = this;
+            this.$rootScope.$on('$stateChangeSuccess',
+                function (event, toState, toParams, fromState, fromParams) {
+                    self.isCollapsed = true;
+                });
+        }
     }
 
     angular
